@@ -9,20 +9,16 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
 - **Description**: Generates a JWT token for authentication.
 - **Request Body**:
   <details>
-    ```json
       {
         "email": "example_user",
         "password": "password123"
       }
-    ```
   </details>
 - **Response**:
   <details>
-    ```json
       {
         "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
       }
-    ```
   </details>
 
 ### User CRUD Operations
@@ -32,16 +28,13 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
 - **Method**: _GET_
 - **Description**: Retrieves a list of all users.
 - **Headers Params**: 
-  <details>
-    ```json 
+  <details> 
       {
         "Authorization": "Bearer {accessToken}"
       }
-    ```
   </details>
 - **Response**:
   <details>
-    ```json
       [
         {
           "id": 1,
@@ -57,7 +50,6 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
         },
         // ... other users
       ]
-    ```
   </details>
 
 #### Get User by ID
@@ -66,22 +58,18 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
 - **Description**: Retrieves a user by their ID.
 - **Headers Params**: 
   <details>
-    ```json
       {
         "Authorization": "Bearer {accessToken}"
       }
-    ```
   </details>
 - **Response**:
   <details>
-    ```json
       {
         "id": 1,
         "name": "user1",
         "email": "user1@example.com",
         "role": "USER"
       }
-    ```
   </details>
 
 #### Create User
@@ -90,33 +78,27 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
 - **Description**: Creates a new user.
 - **Headers Params**: 
   <details>
-    ```json
       {
         "Authorization": "Bearer {accessToken}"
       }
-    ```
   </details>
 - **Request Body**: 
   <details>
-    ```json
       {
         "name": "user1",
         "email": "user1@example.com",
         "password": "newpassword123",
         "role": "USER"
       }
-    ```
   </details>
 - **Response**:
   <details>
-    ```json
       {
         "id": 1,
         "username": "user1",
         "email": "user1@example.com",
         "role": "USER"
       }
-    ```
   </details>
 
 
@@ -126,33 +108,27 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
 - **Description**: Updates an existing user's information.
 - **Headers Params**: 
   <details>
-    ```json
       {
         "Authorization": "Bearer {accessToken}"
       }
-    ```
   </details>
 - **Request Body**: 
   <details>
-    ```json
       {
         "name": "user1",
         "email": "user1@example.com",
         "password": "newpassword123",
         "role": "USER"
       }
-    ```
   </details>
 - **Response**:
   <details>
-    ```json
       {
         "id": 1,
         "username": "user1",
         "email": "user1@example.com",
         "role": "USER"
       }
-    ```
   </details>
 
 
@@ -162,10 +138,8 @@ This API uses token-based authentication (JWT). To access protected endpoints, y
 - **Description**: Deletes a user by their ID.
 - **Headers Params**: 
   <details>
-    ```json
       {
         "Authorization": "Bearer {accessToken}"
       }
-    ```
   </details>
 - **Response**: HTTP 200
